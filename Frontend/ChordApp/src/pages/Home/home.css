@@ -1,9 +1,41 @@
-button {
-    flex: 1;
+.home > *{
+    margin-bottom: 100px;
 }
 
-.welcome {
+.welcome-section {
+    display: flex;
+    width: 100%;
+    height: clamp(25vh, 33vh, 50vh);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("../../assets/welcome_piano.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+}
 
+.welcome-section h1{
+    background: linear-gradient(to right, #1d5730, #00aa39, #43C970, #277440);
+    background-clip: text;
+    color: transparent;
+}
+
+
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    padding: 0 35px;
+    gap: 50px;
+    justify-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text {
+    max-width: 650px;
 }
 
 .nav-section {
@@ -14,8 +46,61 @@ button {
 }
 
 .nav-buttons {
-    display: inherit;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
     width: 100%;
+    justify-items: center;
     box-sizing: border-box;
-    padding: 0 50px;
+}
+
+.nav-buttons button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: #242424;
+    aspect-ratio: 1;
+    transition: box-shadow 0.25s;
+    width: 100%;
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.nav-buttons span {
+    margin-top: 30px;
+    font-size: large;
+}
+
+
+.nav-buttons img {
+    aspect-ratio: 1;
+    width: 100px;
+    height: 100px;
+}
+
+/* Sudo-Classes */
+button:hover {
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -10px -10px 10px #fffbf5;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 700px) {
+    .nav-buttons {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+
+    .about-section {
+        grid-template-columns: repeat(1, minmax(150px, 1fr));
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-buttons {
+        grid-template-columns: repeat(1, minmax(150px, 1fr));
+        padding: 0 10px;
+    }
 }

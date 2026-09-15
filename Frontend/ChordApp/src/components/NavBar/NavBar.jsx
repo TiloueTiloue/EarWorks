@@ -2,28 +2,28 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import "./NavBar.css"
-import logo from "../../assets/musicnote.png"
+
 
 function NavBar() {
   return (
     <div className='nav-body'>
       <div className='nav-header'>
-        <Link className='logo-wrapper' to="/">
-          <img className='logo' src={logo} alt="app logo" />
+        <Link className='logo-wrapper' to='/'>
+          <img className='logo' src='' alt=''app logo />
         </Link>
         <p className='title'>EarWorks</p>
       </div>
       <div className='nav-content'>
-        <Link className='content-link' to="/notes">
+        <Link className='content-link' to='/notes'>
           <p>Notes</p>
         </Link>
-        <Link className='content-link' to="/chords">
+        <Link className='content-link' to='/chords'>
           <p>Chords</p>
         </Link>
-        <Link className='content-link' to="/scales">
+        <Link className='content-link' to='/scales'>
           <p>Scales</p>
         </Link>
-        <Link className='content-link' to="/keys">
+        <Link className='content-link' to='/keys'>
           <p>Keys</p>
         </Link>
       </div>
