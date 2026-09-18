@@ -4,7 +4,4 @@ notes_icon.png }} <div> Icons made by <a href="https://www.magnific.com" title="
 chords_icon.png }} <div> Icons made by <a href="https://www.magnific.com" title="Magnific"> Magnific </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
 keys_icon.png }} <div> Icons made by <a href="https://www.flaticon.com/authors/magnific" title="Magnific"> Magnific </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
 scales_icon.png }} <div> Icons made by <a href="" title="mia elysia"> mia elysia </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
-
-#143B21
-#43C970
-#00aa39
+ear_works_icon.png }} <div> Icons made by <a href="" title="Good Ware"> Good Ware </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>

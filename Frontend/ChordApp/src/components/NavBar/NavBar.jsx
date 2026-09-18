@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import EarWorksIcon from '../../assets/ear_works_icon.png'
 import "./NavBar.css"
 
 
@@ -9,7 +9,7 @@ function NavBar() {
     <div className='nav-body'>
       <div className='nav-header'>
         <Link className='logo-wrapper' to='/'>
-          <img className='logo' src='' alt=''app logo />
+          <img className='logo' src={EarWorksIcon} alt=''app logo />
         </Link>
         <p className='title'>EarWorks</p>
       </div>
