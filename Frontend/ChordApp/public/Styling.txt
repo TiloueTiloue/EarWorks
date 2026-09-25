@@ -13,3 +13,158 @@ formatted like: hexa -> rgb
 -- LIGHTS --
 #f8f2e8 ---> rgb(248, 242, 232)
 #ffde97 ---> rgb(255, 222, 151)
+
+
+.welcome-section {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("../../assets/welcome_piano.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.welcome-section p{
+    font-size: 5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #1d5730, #00aa39, #43C970, #277440);
+    background-clip: text;
+    color: transparent;
+}
+
+
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding: 0 35px;
+    gap: 50px;
+    justify-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text {
+    max-width: 650px;
+}
+
+.about-section h2 {
+    position: relative;
+}
+
+.about-section p {
+    position: relative;
+    font-size: 1.5rem
+}
+
+
+.nav-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-section p {
+    font-size: 3rem;
+    margin-bottom: 100px;
+    font-weight: 600;
+    color: #282828;
+}
+
+.nav-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    width: 100%;
+    justify-items: center;
+    box-sizing: border-box;
+}
+
+.nav-buttons button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: #242424;
+    aspect-ratio: 1;
+    transition: box-shadow 0.25s;
+    width: 100%;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.nav-buttons span {
+    margin-top: 30px;
+    font-size: large;
+    font-weight: 700;
+    color: #282828;
+}
+
+
+.nav-buttons img {
+    aspect-ratio: 1;
+    width: 100%;
+    height: 100%;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+/* Sudo-Classes */
+button:hover {
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -10px -10px 10px #fffbf5;
+}
+
+.about-section h2::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 50px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00aa39;
+    clip-path: polygon(
+        0 0,
+        95% 0,
+        100% 100%,
+        5% 100%
+    );
+}
+
+.about-section p::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: #43C970;
+}
+
+/* Media Queries */
+@media (max-width: 700px) {
+    .nav-buttons {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+
+    .about-section {
+        grid-template-columns: repeat(1, minmax(150px, 1fr));
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-buttons {
+        grid-template-columns: repeat(1, minmax(150px, 1fr));
+        padding: 0 10px;
+    }
+}
