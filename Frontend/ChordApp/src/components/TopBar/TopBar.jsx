@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import EarWorksIcon from '../../assets/ear_works_icon.png'
-import "./NavBar.css"
+import { IoSettingsOutline } from "react-icons/io5";
+import "./TopBar.css"
 
 
 function NavBar() {
@@ -9,9 +10,9 @@ function NavBar() {
     <div className='nav-body'>
       <div className='nav-header'>
         <Link className='logo-wrapper' to='/'>
-          <img className='logo' src={EarWorksIcon} alt=''app logo />
+          <img className='logo' src={EarWorksIcon} alt='app logo'/>
+          <p className='title'>EarWorks</p>
         </Link>
-        <p className='title'>EarWorks</p>
       </div>
       <div className='nav-content'>
         <Link className='content-link' to='/notes'>
@@ -27,8 +28,8 @@ function NavBar() {
           <p>Keys</p>
         </Link>
       </div>
-      <div className='nav-footer'>
-
+      <div className='settings'>
+        <IoSettingsOutline className='gear-icon'/>
       </div>
     </div>
   )

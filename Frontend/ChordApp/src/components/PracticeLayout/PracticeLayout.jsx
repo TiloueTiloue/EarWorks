@@ -1,15 +1,15 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import NavBar from '../NavBar/NavBar'
+import TopBar from '../TopBar/TopBar'
 import "./PracticeLayout.css"
 
 function PracticeWrapper() {
   return (
     <div className='layout'>
 
-        <NavBar />
+        <TopBar />
 
-        <main className='content'>
+        <main className='content'>          
           <Outlet />
         </main>
 
