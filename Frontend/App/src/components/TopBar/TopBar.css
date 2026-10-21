@@ -67,6 +67,14 @@
     margin: 0;
 }
 
+.gear {
+    display: flex;
+    width: 50px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
 .gear-icon {
     width: 40px;
     height: 40px;
@@ -75,17 +83,22 @@
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.settings {
-    display: flex;
-    width: 50px;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
-}
 /* Pseudo-Classes & Pseudo-Elements */
 
+.content-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(255, 229, 174, 1), transparent 50%, rgba(255, 229, 174, 1));
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.content-link:hover::before {
+    opacity: 1;
+}
+
 .content-link:hover {
-    background-color: rgb(255, 229, 174);
     color: #43C970;
 }
 
@@ -97,16 +110,5 @@
 
 /*
 gradient hover
-.content-link::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(255, 185, 30, 0.45), transparent 75%, rgba(255, 185, 30, 0.45));
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
 
-.content-link:hover::before {
-    opacity: 1;
-}
 */

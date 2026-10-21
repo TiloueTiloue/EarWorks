@@ -1,11 +1,14 @@
-import React from 'react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import EarWorksIcon from '../../assets/ear_works_icon.png'
 import { IoSettingsOutline } from "react-icons/io5";
 import "./TopBar.css"
+import SettingsContext from '../ExerciseLayout/SettingsContext';
 
+function TopBar() {
 
-function NavBar() {
+  const { setIsSettingsOpen } = useContext(SettingsContext);
+
   return (
     <div className='nav-body'>
       <div className='nav-header'>
@@ -28,11 +31,11 @@ function NavBar() {
           <p>Keys</p>
         </Link>
       </div>
-      <div className='settings'>
-        <IoSettingsOutline className='gear-icon'/>
+      <div className='gear'>
+        <IoSettingsOutline className='gear-icon' onClick={() => setIsSettingsOpen(true)}/>
       </div>
     </div>
   )
 }
 
-export default NavBar
+export default TopBar

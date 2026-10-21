@@ -3,7 +3,7 @@ import Home from './pages/Home/Home';
 import ChordsPage from './pages/ChordsPage';
 import NotesPage from './pages/NotesPage';
 import KeysPage from './pages/KeysPage';
-import PracticeLayout from './components/PracticeLayout/PracticeLayout';
+import ExerciseLayout from './components/ExerciseLayout/ExerciseLayout';
 import ScalesPage from './pages/Scales';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route element={<PracticeLayout />}>
+        <Route element={<ExerciseLayout />}>
           <Route path="/chords" element={<ChordsPage />} />
           <Route path="/notes" element={<NotesPage />} />
           <Route path="/keys" element={<KeysPage />} />
